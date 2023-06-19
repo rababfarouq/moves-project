@@ -1,0 +1,60 @@
+
+<!-- movies -->
+<div class="row py-5 gy-3">
+  <div class="col-md-4">
+    <div class="welcome">
+      <div class="brdr w-25 mb-4"></div>
+      <h3>Trending</h3>
+      <h3>Movies</h3>
+      <h3>To watch now</h3>
+      <span class="text-muted">most watched movies by day</span>
+      <div class="brdr w-100 mt-4"></div>
+    </div>
+  </div>
+  <div class="col-md-2" *ngFor="let movie of moviesList">
+    <a class="nav-link" [routerLink]="['/details',movie.id,movie.media_type]">
+    <div class="item">
+      <img class="w-100" [src]="imgBaseUrl + movie.poster_path" alt="" />
+      <h2 class="h6">{{ movie.title }}</h2>
+    </div>
+  </a>
+  </div>
+</div>
+<!-- tvshows -->
+<div class="row py-5 gy-3">
+  <div class="col-md-4">
+    <div class="welcome">
+      <div class="brdr w-25 mb-4"></div>
+      <h3>Trending</h3>
+      <h3>Tvshows</h3>
+      <h3>To watch now</h3>
+      <span class="text-muted">most watched Tvshows by day</span>
+      <div class="brdr w-100 mt-4"></div>
+    </div>
+  </div>
+  <div class="col-md-2" *ngFor="let tv of tvshowList">
+    <div class="item">
+      <img class="w-100" [src]="imgBaseUrl + tv.poster_path" alt="" />
+      <h2 class="h6">{{ tv.name }}</h2>
+    </div>
+  </div>
+</div>
+<!-- people -->
+<div class="row py-5 gy-3">
+    <div class="col-md-4">
+      <div class="welcome">
+        <div class="brdr w-25 mb-4"></div>
+        <h3>Trending</h3>
+        <h3>person</h3>
+        <h3>To watch now</h3>
+        <span class="text-muted">most watched person by day</span>
+        <div class="brdr w-100 mt-4"></div>
+      </div>
+    </div>
+    <div class="col-md-2" *ngFor="let person of peoploList">
+      <div class="item">
+        <img class="w-100" [src]="imgBaseUrl +person.profile_path" alt="" />
+        <h2 class="h6">{{ person.name }}</h2>
+      </div>
+    </div>
+  </div>

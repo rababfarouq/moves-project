@@ -1,0 +1,9 @@
+@import '../../styles.scss';
+.navbar{
+    background-color: $lightBgColor;
+    .social-icons{
+        i{
+            margin:0 10px ;
+        }
+    }
+}
